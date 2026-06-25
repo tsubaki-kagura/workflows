@@ -1,0 +1,11 @@
+name: hello
+on:
+  push:
+    branches:
+      - main
+jobs:
+  hello:
+    runs-on: debian-latest
+    steps:
+      - name: print
+        run: echo "hello ya"
