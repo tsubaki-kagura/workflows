@@ -8,9 +8,11 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: 打印当前路径
-        run: pwd
-      - name: 使用 actions/checkout@v7 拉取仓库内的文件
+      - name: 检出仓库文件
         uses: actions/checkout@v7
-      - name: 查看当前路径下有哪些文件
-        run: ls -al
+      - name: 安装 bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - name: 查看 bun 的版本
+        run: bun --version
