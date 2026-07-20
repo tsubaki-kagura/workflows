@@ -8,5 +8,7 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: print current path
+      - name: 打印当前路径
         run: pwd
+      - name: 查看当前路径下有哪些文件
+        run: ls -al
