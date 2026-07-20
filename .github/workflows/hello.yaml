@@ -10,5 +10,7 @@ jobs:
     steps:
       - name: 打印当前路径
         run: pwd
+      - name: 使用 actions/checkout@v7 拉取仓库内的文件
+        uses: actions/checkout@v7
       - name: 查看当前路径下有哪些文件
         run: ls -al
