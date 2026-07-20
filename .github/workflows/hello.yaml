@@ -1,4 +1,5 @@
 name: hello
+
 on:
   push:
     branches:
@@ -7,5 +8,5 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: print
-        run: echo "hello ya"
+      - name: print current path
+        run: pwd
